@@ -1,8 +1,10 @@
 const { fetchProducts, fetchProductById, addProductToList } = require("../services/productServices")
+const path = require('path')
 
 const getAllProducts = (req,res)=>{
-   const response = fetchProducts()
-    res.send(`<h2>${response}</h2>`)
+//    const response = fetchProducts()
+    // res.send(`<h2>${response}</h2>`)
+    res.sendFile(path.join(__dirname,'..','views','product.html'))
 }
 
 const getProductById = (req,res)=>{
