@@ -1,13 +1,9 @@
-const express = require('express')
-
-const router = express.Router()
-
-router.get('/',(req,res)=>{
+const fetchAllProducts = ((req,res)=>{
     res.send('<h2>Fetching all products</h2>')
     
 })
 
-router.get('/:id',(req,res)=>{
+const fetchProductWithId = ((req,res)=>{
 
 const productId = req.params.id
 
@@ -15,8 +11,12 @@ const productId = req.params.id
 
 })
 
-router.post('/',(req,res)=>{
+const addNewProduct = ((req,res)=>{
  res.send('<h2>Adding a new product/h2>')
 })
 
-module.exports = router
+module.exports={
+    fetchAllProducts,
+    fetchProductWithId,
+    addNewProduct
+}
