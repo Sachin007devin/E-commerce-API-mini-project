@@ -17,8 +17,14 @@ const product = fetchProductById(productId)
 }
 
 const addProduct = (req,res)=>{
-    const addProductResponse = addProductToList()
- res.send(addProductResponse)
+//     const addProductResponse = addProductToList()
+//  res.send(addProductResponse)
+
+const data = req.body
+console.log(data)
+res.json(data.product)
+
+
 }
 
 module.exports={
