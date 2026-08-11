@@ -3,7 +3,7 @@ const fetchProducts = ()=>{
 }
 
 const fetchProductById = (id)=>{
-return `<h2>Fetching product with ID: ${id}/h2>`
+return `Fetching product with ID: ${id}`
 }
 
 const addProductToList = ()=>{
