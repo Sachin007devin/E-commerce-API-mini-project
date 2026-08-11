@@ -5,7 +5,7 @@ const productRouter = require('./routes/ProductRoutes ')
 const cartRouter = require('./routes/CartRoutes ')
 
   app.use('/users',userRouter)
-  app.use('/products',productRouter)
+  app.use('/api/products',productRouter)
   app.use('/cart',cartRouter)
 
 app.listen(7777,()=>{
