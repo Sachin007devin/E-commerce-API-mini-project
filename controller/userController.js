@@ -1,9 +1,9 @@
-const fetchAllUser = ((req,res)=>{
+const getAllUsers = ((req,res)=>{
     res.send('<h2>Fetching all users</h2>')
     
 })
 
-const fetchUSerWithId = ((req,res)=>{
+const getUserById = ((req,res)=>{
 
 const userId = req.params.id
 
@@ -16,7 +16,7 @@ const addUser = ((req,res)=>{
 })
 
 module.exports={
-    fetchAllUser,
-    fetchUSerWithId,
+    getAllUsers,
+    getUserById,
     addUser
 }

@@ -1,11 +1,11 @@
 const express = require('express')
-const { fetchAllUser, fetchUSerWithId, addUser } = require('../controller/userController')
+const { getAllUsers, getUserById, addUser } = require('../controller/userController')
 
 const router = express.Router()
 
-router.get('/',fetchAllUser)
+router.get('/',getAllUsers)
 
-router.get('/:id',fetchUSerWithId)
+router.get('/:id',getUserById)
 
 router.post('/',addUser)
 

@@ -1,9 +1,9 @@
-const fetchAllProducts = ((req,res)=>{
+const getAllProducts = ((req,res)=>{
     res.send('<h2>Fetching all products</h2>')
     
 })
 
-const fetchProductWithId = ((req,res)=>{
+const getProductById = ((req,res)=>{
 
 const productId = req.params.id
 
@@ -11,12 +11,12 @@ const productId = req.params.id
 
 })
 
-const addNewProduct = ((req,res)=>{
+const addProduct = ((req,res)=>{
  res.send('<h2>Adding a new product/h2>')
 })
 
 module.exports={
-    fetchAllProducts,
-    fetchProductWithId,
-    addNewProduct
+    getAllProducts,
+    getProductById,
+    addProduct
 }

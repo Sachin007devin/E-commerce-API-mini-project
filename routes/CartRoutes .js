@@ -1,10 +1,10 @@
 const express = require('express')
-const { fetchCartWithId, addProductToCartWithuserId } = require('../controller/cartController')
+const { getCartForUser, addProductToCart } = require('../controller/cartController')
 
 const router = express.Router()
 
-router.get('/:userId',fetchCartWithId)
+router.get('/:userId',getCartForUser)
 
-router.post('/:userId',addProductToCartWithuserId)
+router.post('/:userId',addProductToCart)
 
 module.exports = router

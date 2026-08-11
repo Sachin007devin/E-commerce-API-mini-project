@@ -1,12 +1,12 @@
 const express = require('express')
-const { fetchAllProducts, fetchProductWithId, addNewProduct } = require('../controller/productController')
+const { getAllProducts, getProductById, addProduct } = require('../controller/productController')
 
 const router = express.Router()
 
-router.get('/',fetchAllProducts)
+router.get('/',getAllProducts)
 
-router.get('/:id',fetchProductWithId)
+router.get('/:id',getProductById)
 
-router.post('/',addNewProduct)
+router.post('/',addProduct)
 
 module.exports = router
